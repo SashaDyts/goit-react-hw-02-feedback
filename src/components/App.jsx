@@ -24,12 +24,10 @@ class App extends Component {
     bad: PropTypes.number.isRequired,
   };
 
-  optionDecrement = e => {
-    const optionToChange = e.target.textContent;
-
+  optionDecrement = review => {
     this.setState(prevState => {
       return {
-        [optionToChange]: (prevState[optionToChange] += 1),
+        [review]: (prevState[review] += 1),
       };
     });
   };

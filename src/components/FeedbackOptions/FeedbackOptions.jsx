@@ -10,7 +10,12 @@ const FeedbackOptions = ({ data, onButtonClick }) => {
         {data.map(name => {
           return (
             <ButtonsListItem key={name}>
-              <Button type="button" onClick={onButtonClick}>
+              <Button
+                type="button"
+                onClick={() => {
+                  onButtonClick(name);
+                }}
+              >
                 {name}
               </Button>
             </ButtonsListItem>
